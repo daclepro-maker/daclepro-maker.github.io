@@ -1,56 +1,100 @@
-/* Resetare de bază */
+/* 1. Resetare și Stil General */
 body {
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Fundalul închis */
-    color: #e0e0e0; /* Culoarea textului (alb murdar) */
-    font-family: Arial, sans-serif;
+    background-color: #0f0f0f; /* Negru mat, foarte odihnitor */
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Centrează totul pe verticală */
 }
 
-/* Containerul principal care ține logo-ul și textul */
+/* 2. Containerul Principal (Logo + Text) */
 .container {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px; /* Spațiu generos între robot și listă */
     max-width: 900px;
-    gap: 50px; /* Spațiu între logo și text */
+    padding: 20px;
 }
 
-/* Stil pentru logo */
+/* 3. Stil pentru Logo (Robotul Android) */
 .logo {
-    width: 250px; /* Ajustează mărimea după preferințe */
+    width: 280px; /* Mărime echilibrată */
     height: auto;
+    filter: drop-shadow(0 0 10px rgba(52, 168, 83, 0.2)); /* Un mic efect de strălucire verde */
 }
 
-/* Stil pentru titlu */
+/* 4. Secțiunea de Text */
+.content-section {
+    display: flex;
+    flex-direction: column;
+}
+
 h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #ffffff;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    color: #f1f1f1;
 }
 
-/* Stilul pentru link-uri */
-ul li a {
-    text-decoration: none; /* Șterge linia de sub text */
-    color: #4285F4;        /* O nuanță frumoasă de albastru (Google Blue) */
-    transition: 0.3s;      /* Face tranziția de culoare mai fină */
+/* 5. Lista și Link-urile */
+ul {
+    list-style: none; /* Scoatem bulinele standard pentru un look mai modern */
+    padding: 0;
+    margin: 0;
 }
 
-/* Ce se întâmplă când pui mouse-ul pe link */
-ul li a:hover {
-    color: #34A853;        /* Se schimbă în verdele Android când pui mouse-ul */
-    text-decoration: underline; /* Apare linia doar la hover, dacă vrei */
 ul li {
-    margin-bottom: 15px; /* Adaugă spațiu egal sub fiecare rând */
-    list-style-position: inside; /* Se asigură că bulina stă frumos lângă text */
+    margin-bottom: 20px; /* Spațiu egal și generos între rânduri */
 }
 
 ul li a {
     text-decoration: none;
-    color: #4285F4;
-    font-size: 1.2rem; /* Face textul puțin mai mare și mai lizibil */
-    display: inline-block; /* Ajută la calcularea corectă a spațiului */
+    color: #4285F4; /* Albastru frumos de tip Google */
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease; /* Face animația de hover fină */
+}
+
+/* Adăugăm o mică bulină personalizată în fața link-ului */
+ul li a::before {
+    content: "•";
+    color: #34A853; /* Verde Android */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: 10px;
+}
+
+/* 6. Efectul de Hover (Când pui mouse-ul) */
+ul li a:hover {
+    color: #34A853; /* Se schimbă în verde */
+    transform: translateX(10px); /* Textul se mișcă ușor la dreapta */
+}
+
+/* 7. Adaptare pentru Mobil (Dacă te uiți de pe telefon) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .logo {
+        width: 180px;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    ul li a {
+        justify-content: center;
+    }
 }
