@@ -1,0 +1,44 @@
+/* Resetare de bază */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fundalul închis */
+    color: #e0e0e0; /* Culoarea textului (alb murdar) */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Containerul principal care ține logo-ul și textul */
+.container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 900px;
+    gap: 50px; /* Spațiu între logo și text */
+}
+
+/* Stil pentru logo */
+.logo {
+    width: 250px; /* Ajustează mărimea după preferințe */
+    height: auto;
+}
+
+/* Stil pentru titlu */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Stil pentru listă */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 1.8; /* Spațiu între rânduri */
+}
+
+li {
+    font-size: 1.1rem;
+}
