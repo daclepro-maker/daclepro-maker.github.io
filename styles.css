@@ -43,4 +43,14 @@ ul li a {
 ul li a:hover {
     color: #34A853;        /* Se schimbă în verdele Android când pui mouse-ul */
     text-decoration: underline; /* Apare linia doar la hover, dacă vrei */
+ul li {
+    margin-bottom: 15px; /* Adaugă spațiu egal sub fiecare rând */
+    list-style-position: inside; /* Se asigură că bulina stă frumos lângă text */
+}
+
+ul li a {
+    text-decoration: none;
+    color: #4285F4;
+    font-size: 1.2rem; /* Face textul puțin mai mare și mai lizibil */
+    display: inline-block; /* Ajută la calcularea corectă a spațiului */
 }
