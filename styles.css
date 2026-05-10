@@ -32,13 +32,15 @@ h1 {
     color: #ffffff;
 }
 
-/* Stil pentru listă */
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    line-height: 1.8; /* Spațiu între rânduri */
+/* Stilul pentru link-uri */
+ul li a {
+    text-decoration: none; /* Șterge linia de sub text */
+    color: #4285F4;        /* O nuanță frumoasă de albastru (Google Blue) */
+    transition: 0.3s;      /* Face tranziția de culoare mai fină */
 }
 
-li {
-    font-size: 1.1rem;
+/* Ce se întâmplă când pui mouse-ul pe link */
+ul li a:hover {
+    color: #34A853;        /* Se schimbă în verdele Android când pui mouse-ul */
+    text-decoration: underline; /* Apare linia doar la hover, dacă vrei */
 }
