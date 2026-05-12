@@ -11,14 +11,30 @@ body {
     min-height: 100vh; /* Centrează totul pe verticală */
 }
 
-/* 2. Containerul Principal (Logo + Text) */
+/* 2. Containerul Principal - REPARAT */
 .container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 50px; /* Spațiu generos între robot și listă */
-    max-width: 900px;
+    justify-content: center; /* Această linie forțează centrarea pe orizontală */
+    width: 100%;
+    max-width: 1100px;
+    gap: 60px;
     padding: 20px;
+    margin: 0 auto; /* Asigură centrarea containerului în pagină */
+}
+
+/* Stil pentru secțiunea logo-ului cu link */
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Împiedică logo-ul să se micșoreze dacă textul e lung */
+}
+
+.logo-section a {
+    display: block; /* Face link-ul să se comporte ca un container pentru imagine */
+    line-height: 0; /* Elimină spațiile goale de sub imagine */
 }
 
 /* 3. Stil pentru Logo (Robotul Android) */
