@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Buttons</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #0a1128; /* Matches the dark-blue theme */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Container to align the buttons side-by-side */
+        .button-group {
+            display: flex;
+            gap: 1.5rem; /* Space between buttons */
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Base button style */
+        .brand-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            min-width: 160px;
+            text-align: center;
+        }
+
+        /* Apple Button Styling */
+        .btn-apple {
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-apple:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
+            background-color: #f4f4f5;
+        }
+
+        /* Samsung Button Styling */
+        .btn-samsung {
+            background: linear-gradient(135deg, #1428a0 0%, #0c1c78 100%);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(20, 40, 160, 0.3);
+        }
+
+        .btn-samsung:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(20, 40, 160, 0.5);
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="button-group">
+        <a href="#apple/index.html" target="_blank" class="brand-btn btn-apple">
+            Apple
+        </a>
+
+        <a href="#samsung/index.html" target="_blank" class="brand-btn btn-samsung">
+            Samsung
+        </a>
+    </div>
+
+</body>
+</html>
