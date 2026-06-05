@@ -1,25 +1,201 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exynos Community</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My GitHub Space</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Modern CSS Reset & Variables */
+        :root {
+            --bg-deep: #0a1128;
+            --bg-card: rgba(27, 38, 59, 0.4);
+            --border-glow: rgba(73, 182, 255, 0.2);
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-cyan: #00f2fe;
+            --accent-blue: #4facfe;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            /* Subtle background glow effect */
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(79, 172, 254, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 242, 254, 0.1) 0%, transparent 40%);
+        }
+
+        /* Container with Glassmorphism effect */
+        .profile-container {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glow);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Profile Image / Avatar Glow */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            background-image: linear-gradient(var(--bg-deep), var(--bg-deep)), linear-gradient(to right, var(--accent-blue), var(--accent-cyan));
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            padding: 4px;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #fff 30%, var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .bio {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Modern Tech Badges */
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.4rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Buttons & Links */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: block;
+            padding: 1rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-cyan) 100%);
+            color: #0a1128;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <div class="logo-section">
-    <a href="credits.html">
-        <img src="Android_robot_head.svg.png" alt="Android Logo" class="logo">
-    </a>
-    </div>
+    <div class="profile-container">
+        <img src="https://github.com/identicons/guest.png" alt="Profile Picture" class="avatar">
+        
+        <h1>Your Name</h1>
+        <div class="subtitle">Developer & Creator</div>
+        
+        <p class="bio">
+            Building digital experiences, exploring open-source, and breaking things to learn how they work. Welcome to my corner of GitHub.
+        </p>
 
-        <div class="content-section">
-            <h1>Builds, ,Rooting Apps, Mods for the 8895 devices Community</h1>
-           <ul>
-            <li><a href="apple">Apple Bypass, Tweaks</a></li>
-            <li><a href="samsung">Samsung Custom ROMS, mods</a></li>
-        </ul>
+        <div class="tags">
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Git</span>
+            <span class="tag">Python</span>
+        </div>
+
+        <div class="links-container">
+            <a href="https://github.com/YOUR-USERNAME" target="_blank" class="btn btn-primary">View GitHub Profile</a>
+            <a href="#projects" class="btn btn-secondary">My Projects</a>
         </div>
     </div>
 
