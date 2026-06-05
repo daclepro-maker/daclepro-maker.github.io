@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DaclePro</title>
+    <title>My GitHub Space</title>
+    <!-- Google Fonts for modern typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -57,6 +58,15 @@
             animation: fadeIn 1s ease-out;
         }
 
+        /* Avatar Wrapper & Link styling */
+        .avatar-link {
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+        }
+
         /* Profile Image / Avatar Glow */
         .avatar {
             width: 120px;
@@ -67,12 +77,14 @@
             background-origin: border-box;
             background-clip: content-box, border-box;
             padding: 4px;
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: block;
         }
 
-        .avatar:hover {
-            transform: scale(1.05) rotate(5deg);
+        /* Hover effect on the link wraps into the image */
+        .avatar-link:hover .avatar {
+            transform: scale(1.08) rotate(8deg);
+            box-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
         }
 
         /* Typography */
@@ -177,25 +189,32 @@
 <body>
 
     <div class="profile-container">
-        <img src="https://avatars.githubusercontent.com/u/264457593?s=400&u=e9eca822c48490b959cda63b0a7a36c094a818da&v=4" alt="Profile Picture" class="avatar">
         
-        <h1>DaclePro</h1>
+        <!-- CLICKABLE AVATAR: Change the href to whatever link you want -->
+        <a href="https://github.com/daclepro-maker/daclepro-maker.github.io/blob/main/credits.html" target="_blank" class="avatar-link" title="Visit my profile">
+            <!-- Replace with your GitHub profile picture link -->
+            <img src="https://avatars.githubusercontent.com/u/264457593?s=400&u=e9eca822c48490b959cda63b0a7a36c094a818da&v=4" alt="Profile Picture" class="avatar">
+        </a>
+        
+        <h1>Your Name</h1>
         <div class="subtitle">Developer & Creator</div>
         
         <p class="bio">
-            Welcome to my corner of GitHub. Here you fing Custom ROMs and jailbreaks for iPhones.
+            Welcome to my corner of GitHub. I am a Custom ROM Developer, and iCloud Bypass Creator. If this is what you are looking for, you did come to the right place.
         </p>
 
+        <!-- Skill Tags -->
         <div class="tags">
-            <span class="tag">iPhone Modding</span>
-            <span class="tag">Exynos 8895</span>
-            <span class="tag">OneUI</span>
-            <span class="tag">LineageOS</span>
+            <span class="tag">Jailbreaker</span>
+            <span class="tag">JTool maker</span>
+            <span class="tag">System Developer</span>
+            <span class="tag">Modder</span>
         </div>
 
+        <!-- Call to Action Links -->
         <div class="links-container">
-            <a href="https://github.com/daclepro-maker/" target="_blank" class="btn btn-primary">View GitHub Profile</a>
-            <a href="#projects" class="btn btn-secondary">My Projects</a>
+            <a href="https://github.com/daclepro-maker" target="_blank" class="btn btn-primary">View GitHub Profile</a>
+            <a href="" class="btn btn-secondary">My Projects</a>
         </div>
     </div>
 
